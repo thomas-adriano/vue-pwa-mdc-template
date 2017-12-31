@@ -36,6 +36,9 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env
     }),
+    new webpack.ProvidePlugin({
+      mdc: "../node_modules/material-components-web/dist/material-components-web.js"
+    }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
